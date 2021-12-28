@@ -48,6 +48,7 @@ Se pide crear un servicio basado en spring boot que a se conecte a una BBDD post
 # ¿Qué se valorará?
 
 * Especificación en OpenAPI de la API del micro
+* Estructura del proyecto y codificación clara y comprensible
 * Cobertura de tests
 * Uso de diversos tipos de tests
 * Optimización de accesos
