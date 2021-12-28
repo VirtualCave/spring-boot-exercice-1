@@ -40,7 +40,7 @@ En el fichero *currency-service-api-rest.yml* viene la definición OpenAPI del s
 Se pide crear un servicio basado en spring boot que a se conecte a una BBDD postgres inicializada con los datos contenidos en el script *init-db.sql*, que publique un API rest con las siguientes operaciones:
 
 * Permitir crear una tarifa nueva
-* Permitir recuperar una tarifa por id
+* Permitir recuperar una tarifa por id, con los precios debidamente formateados y mostrando el código y símbolo de la moneda.
 * Permitir modificar el precio de una tarifa
 * Permitir borrar una tarifa por id
 * Permitir a partir de una fecha, el identificador del producto y el identificador de la marca, recuperar la tarifa a aplicar con los precios correctamente formateados con los decimales proporcionados por el servicio de monedas
