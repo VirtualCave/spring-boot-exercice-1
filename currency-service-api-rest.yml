@@ -1,0 +1,76 @@
+openapi: 3.0.3
+info:
+  title: Currency Api
+  description: Handle the info about currencies in platform
+  version: "1.0"
+tags:
+- name: currencies
+  description: Available operations for currencies domain.
+paths:
+  /v1/currencies:
+    get:
+      tags:
+      - currencies
+      summary: Get currencies list
+      operationId: getCurrencies
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Currency'
+        401:
+          description: Authentication is required to get the requested response
+          content: {}
+  /v1/currencies/{currencyCode}:
+    get:
+      tags:
+      - currencies
+      summary: Get currency detail
+      operationId: getCurrencyByCode
+      parameters:
+        - in: path
+          description: The currency ISO code
+          name: currencyCode
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Currency'
+        401:
+          description: Authentication is required to get the requested response
+        404:
+          description: Currency not found
+components:
+  schemas:
+    Currency:
+      type: object
+      properties:
+        symbol:
+          type: string
+          example: "€"
+        code:
+          type: string
+          description: ISO Code of the currency
+          example: "EUR"
+        decimals:
+          type: integer
+          example: 2
+      required:
+        - symbol
+        - code
+        - decimals
+  securitySchemes:
+    basicAuth: 
+      type: http
+      scheme: basic
+security:
+  - basicAuth: []  # <-- use the same name here
