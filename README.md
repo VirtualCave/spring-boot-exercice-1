@@ -24,7 +24,7 @@ Base de datos donde tendremos almacenadas las distintas tarifas que gestionaremo
 
 * **ID**: Identificador único de la tarifa
 * **BRAND_ID**: Identificador único de la marca
-* **PRODUCTO_ID**: Identificador único del producto
+* **PRODUCT_ID**: Identificador único del producto
 * **START_DATE**: Fecha de aplicación de la tarifa
 * **END_DATE**: Fecha de fin de aplicación de la tarifa
 * **PRICE**: Precio del producto sin decimales, los decimales deben extraerse del servicio de moneda
@@ -48,5 +48,7 @@ Se pide crear un servicio basado en spring boot que a se conecte a una BBDD post
 # ¿Qué se valorará?
 
 * Especificación en OpenAPI de la API del micro
+* Cobertura de tests
+* Uso de diversos tipos de tests
 * Optimización de accesos
 * Una resolución reactiva se valorará positivamente
