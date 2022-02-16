@@ -13,13 +13,13 @@ Base de datos donde tendremos almacenadas las distintas tarifas que gestionaremo
 | ID | BRAND_ID | PRODUCT_ID | START_DATE | END_DATE   | PRICE | CURRENCY_CODE |
 |----| -------- | ---------- | ---------- | ---------- | ----- | ------------- |
 | 1  | 1        | 1          | 2022-01-01 | 2022-05-31 | 1550 | EUR           |
-| 1  | 1        | 1          | 2022-06-01 | 2022-12-31 | 1850 | USC           |
-| 1  | 2        | 1          | 2022-01-01 | 2022-05-31 | 2050 | EUR           |
-| 1  | 2        | 1          | 2022-06-01 | 2022-12-31 | 2250 | USC           |
-| 1  | 1        | 2          | 2022-01-01 | 2022-05-31 | 2550 | EUR           |
-| 1  | 1        | 2          | 2022-06-01 | 2022-12-31 | 2850 | USC           |
-| 1  | 2        | 2          | 2022-01-01 | 2022-05-31 | 3050 | EUR           |
-| 1  | 2        | 2          | 2022-06-01 | 2022-12-31 | 3250 | USC           |
+| 2  | 1        | 1          | 2022-06-01 | 2022-12-31 | 1850 | USC           |
+| 3  | 2        | 1          | 2022-01-01 | 2022-05-31 | 2050 | EUR           |
+| 4  | 2        | 1          | 2022-06-01 | 2022-12-31 | 2250 | USC           |
+| 5  | 1        | 2          | 2022-01-01 | 2022-05-31 | 2550 | EUR           |
+| 6  | 1        | 2          | 2022-06-01 | 2022-12-31 | 2850 | USC           |
+| 7  | 2        | 2          | 2022-01-01 | 2022-05-31 | 3050 | EUR           |
+| 8  | 2        | 2          | 2022-06-01 | 2022-12-31 | 3250 | USC           |
 | ...| ...      | ...        | ...        | ...        | ...  | ...           |
 
 * **ID**: Identificador único de la tarifa
@@ -34,7 +34,7 @@ Base de datos donde tendremos almacenadas las distintas tarifas que gestionaremo
 
 ### Servicio de gestión de monedas
 
-En el fichero *currency-service-api-rest.yml* viene la definición OpenAPI del servicio de monedas que nos dará la información disponible de las monedas dadas de alta en la plataforma.
+En el fichero *currency-service-api-rest.yml* viene la especificación OpenAPI de la API del servicio de monedas, que nos proporcionará la información disponible de las monedas dadas de alta en la plataforma.
 
 # ¿Qué se pide?
 Se pide crear un servicio basado en spring boot que a se conecte a una BBDD postgres inicializada con los datos contenidos en el script *init-db.sql*, que publique un API rest con las siguientes operaciones:
@@ -47,7 +47,7 @@ Se pide crear un servicio basado en spring boot que a se conecte a una BBDD post
 
 # ¿Qué se valorará?
 
-* Especificación en OpenAPI de la API del micro
+* Especificación en OpenAPI de la API expuesta por el micro de tarifas
 * Estructura del proyecto y codificación clara y comprensible
 * Cobertura de tests
 * Uso de diversos tipos de tests
