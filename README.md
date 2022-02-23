@@ -34,7 +34,7 @@ Base de datos donde tendremos almacenadas las distintas tarifas que gestionaremo
 
 ### Servicio de gestión de monedas
 
-En el fichero *currency-service-api-rest.yml* viene la especificación OpenAPI de la API del servicio de monedas, que nos proporcionará la información disponible de las monedas dadas de alta en la plataforma.
+En el fichero *currency-service-api-rest.yml* viene la especificación OpenAPI de la API del servicio de monedas, que nos proporcionará la información disponible de las monedas dadas de alta en la plataforma. El servicio de tarifas debe consumir dicho servicio para usar dicha información, por lo que se aconseja algún tipo de mecanismo para mockear dicha integración (wiremock,...)
 
 # ¿Qué se pide?
 Se pide crear un servicio basado en spring boot que a se conecte a una BBDD postgres inicializada con los datos contenidos en el script *init-db.sql*, que publique un API rest con las siguientes operaciones:
@@ -47,9 +47,8 @@ Se pide crear un servicio basado en spring boot que a se conecte a una BBDD post
 
 # ¿Qué se valorará?
 
-* Especificación en OpenAPI de la API expuesta por el micro de tarifas
+* Especificación en OpenAPI de la API del micro de tarifas del ejercicio
 * Estructura del proyecto y codificación clara y comprensible
-* Cobertura de tests
-* Uso de diversos tipos de tests
+* Mínimo un test representativo de los que incluirías
 * Optimización de accesos
 * Una resolución reactiva se valorará positivamente
